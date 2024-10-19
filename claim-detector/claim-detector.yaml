@@ -3,12 +3,12 @@
 
     "server_name": "potato annotator",
 
-    "annotation_task_name": "Simple Single-Choice Example",
+    "annotation_task_name": "Claim Highlighting",
 
     # Potato will write the annotation file for all annotations to this
     # directory, as well as per-annotator output files and state information
     # necessary to restart annotation.
-    "output_annotation_dir": "annotation_output/simple-radio-selection/",
+    "output_annotation_dir": "annotation_output/",
 
     # The output format for the all-annotator data. Allowed formats are:
     # * jsonl
@@ -16,14 +16,14 @@
     # * csv
     # * tsv
     #
-    "output_annotation_format": "tsv", 
+    "output_annotation_format": "json", 
 
     # If annotators are using a codebook, this will be linked at the top to the
     # instance for easy access
     "annotation_codebook_url": "",
 
     "data_files": [
-       "data/toy-example.json"
+       "data/toy-example.csv"
     ],
 
     "item_properties": {
@@ -46,18 +46,18 @@
 
     "annotation_schemes": [      
         {
-            "annotation_type": "radio",
-            "name": "favorite_color", 
-            "description": "What food does this text make you want to eat?",
+            "annotation_type": "highlight",
+            "name": "certainty", 
+            "description": "Highlight which phrases make the sentence more or less certain",
             "labels": [
-               "pizza", "bagels", "burgers", "curry", "tacos",
+               "certain", "uncertain"
             ],
 
             # If true, numbers [1-len(labels)] will be bound to each
-            # label. Aannotations with more than 10 are not supported with this
-            # simple keybinding and will need to use the full item specification
-            # to bind all labels to keys.
-            "sequential_key_binding": True,                        
+            # label. Highlight selection annotations with more than 10 are not supported
+            # with this simple keybinding and will need to use the full item
+            # specification to bind all labels to keys.
+            "sequential_key_binding": True,            
         },       
     ],
 
