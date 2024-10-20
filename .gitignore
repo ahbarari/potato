@@ -49,3 +49,9 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
+
+claim-detector/data/html_data
+claim-detector/annotation_output
+claim-detector/user_config.json
+
+potato/templates
