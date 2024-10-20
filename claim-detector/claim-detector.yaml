@@ -16,14 +16,14 @@
     # * csv
     # * tsv
     #
-    "output_annotation_format": "json", 
+    "output_annotation_format": "jsonl", 
 
     # If annotators are using a codebook, this will be linked at the top to the
     # instance for easy access
     "annotation_codebook_url": "",
 
     "data_files": [
-       "data/toy-example.csv"
+       "data/posts.jsonl"
     ],
 
     "item_properties": {
@@ -47,19 +47,42 @@
     "annotation_schemes": [      
         {
             "annotation_type": "highlight",
-            "name": "certainty", 
-            "description": "Highlight which phrases make the sentence more or less certain",
+            "name": "claim highlighting", 
+            "description": "Highlight the part that includes verifiable claim (about diabetes)",
             "labels": [
-               "certain", "uncertain"
+               "verifiable claim"
             ],
 
             # If true, numbers [1-len(labels)] will be bound to each
             # label. Highlight selection annotations with more than 10 are not supported
             # with this simple keybinding and will need to use the full item
             # specification to bind all labels to keys.
-            "sequential_key_binding": True,            
-        },       
+            "sequential_key_binding": False,            
+        },
+        {
+          "annotation_type": "multiselect",
+          "name": "no_claim",
+          "description": "Check this checkbox if there is no verifiable claims in the comments of this post",
+
+          # If true, display the labels horizontally
+        #   "horizontal": True,
+
+          "labels": [
+             "No claim detected."
+          ],
+          "sequential_key_binding": True,
+      },       
     ],
+
+    # define the surveyflow of the system, set up the pages before and after the data annotation page
+    "surveyflow": {
+      "on": True,
+      "order" : ['pre_annotation', 'post_annotation'],
+      "pre_annotation": ['survey_flow/demographics.jsonl', 'survey_flow/consent.jsonl', 'survey_flow/intro.jsonl'],
+      "post_annotation": ['survey_flow/end.jsonl'],
+      # If set, we will automatically generate testing questions similar to the annotation instances, but explicitly ask the annotator to choose one option
+    #   "testing": [ ],
+    },
 
     # The html that changes the visualiztation for your task. Change this file
     # to influence the layout and description of your task. This is not a full
