@@ -20,7 +20,7 @@
 
     # If annotators are using a codebook, this will be linked at the top to the
     # instance for easy access
-    "annotation_codebook_url": "",
+    "annotation_codebook_url": "https://docs.google.com/document/d/1T3Apab4XtTAd35FwJPitLwOQe5oTAnOqdunuB9XGJTQ/",
 
     "data_files": [
        "data/posts.jsonl"
