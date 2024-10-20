@@ -1,4 +1,4 @@
-# Claim detection Highliter (forked project from potato)
+# Claim detection Highliter (forked project from [potato 🥔](https://github.com/davidjurgens/potato))
 
 To run:
 
