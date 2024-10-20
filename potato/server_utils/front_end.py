@@ -250,7 +250,7 @@ def generate_site(config):
     codebook_html = ""
     if len(config.get("annotation_codebook_url", "")) > 0:
         annotation_codebook = config["annotation_codebook_url"]
-        codebook_html = '<a href="{{annotation_codebook_url}}" class="nav-item nav-link">Annotation Codebook</a>'
+        codebook_html = '<a href="{{annotation_codebook_url}}" target="_blank" class="nav-item nav-link">Annotation Codebook</a>'
         codebook_html = codebook_html.replace("{{annotation_codebook_url}}", annotation_codebook)
 
     #
@@ -385,7 +385,7 @@ def generate_surveyflow_pages(config):
     codebook_html = ""
     if len(config.get("annotation_codebook_url", "")) > 0:
         annotation_codebook = config["annotation_codebook_url"]
-        codebook_html = '<a href="{{annotation_codebook_url}}" class="nav-item nav-link">Annotation Codebook</a>'
+        codebook_html = '<a href="{{annotation_codebook_url}}" target="_blank" class="nav-item nav-link">Annotation Codebook</a>'
         codebook_html = codebook_html.replace("{{annotation_codebook_url}}", annotation_codebook)
 
     html_template = html_template.replace("{{annotation_codebook}}", codebook_html)
