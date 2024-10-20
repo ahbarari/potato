@@ -142,8 +142,8 @@ template_dict = {
         'fixed_keybinding': os.path.join(cur_program_dir, 'base_html/examples/fixed_keybinding_layout.html')
     },
     "surveyflow_html_layout": {
-        'default': os.path.join(cur_program_dir, 'base_html/examples/plain_layout.html'),
-        'plain': os.path.join(cur_program_dir, 'base_html/examples/plain_layout.html'),
+        'default': os.path.join(cur_program_dir, 'base_html/examples/surveryflow_plain_layout.html'),
+        'plain': os.path.join(cur_program_dir, 'base_html/examples/surveryflow_plain_layout.html'),
         'kwargs': os.path.join(cur_program_dir, 'base_html/examples/kwargs_example.html'),
         'fixed_keybinding': os.path.join(cur_program_dir, 'base_html/examples/fixed_keybinding_layout.html')
     }

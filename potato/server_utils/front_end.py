@@ -233,13 +233,18 @@ def generate_site(config):
     else:
         # If we don't have a custom layout, accumulate all the tasks into a
         # single HTML element
-        schema_layouts = ""
-        for annotation_scheme in annotation_schemes:
+        claim_schema_layouts = ""
+        no_claim_schema_layouts = ""
+        for idx, annotation_scheme in enumerate(annotation_schemes):
             schema_layout, keybindings = generate_schematic(annotation_scheme)
-            schema_layouts += schema_layout + "\n"
+            if idx == 0:
+                claim_schema_layouts += schema_layout 
+            elif idx == 1:
+                no_claim_schema_layouts += schema_layout    
             all_keybindings.extend(keybindings)
 
-        task_html_layout = task_html_layout.replace("{{annotation_schematic}}", schema_layouts)
+        task_html_layout = task_html_layout.replace("{{claim_annotation_schematic}}", claim_schema_layouts)
+        task_html_layout = task_html_layout.replace("{{no_claim_annotation_schematic}}", no_claim_schema_layouts)   
 
     # Add in a codebook link if the admin specified one
     codebook_html = ""

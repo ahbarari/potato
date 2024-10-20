@@ -9,8 +9,8 @@ from potato.server_utils.config_module import config
 logger = logging.getLogger(__name__)
 
 SPAN_COLOR_PALETTE = [
-    "(230, 25, 75)",
     "(60, 180, 75)",
+    "(230, 25, 75)",
     "(255, 225, 25)",
     "(0, 130, 200)",
     "(245, 130, 48)",
