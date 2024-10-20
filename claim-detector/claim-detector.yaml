@@ -48,7 +48,7 @@
         {
             "annotation_type": "highlight",
             "name": "claim highlighting", 
-            "description": "Highlight the part that includes verifiable claim (about diabetes)",
+            "description": "Check this box to highlight the part that includes verifiable claim",
             "labels": [
                "verifiable claim"
             ],
