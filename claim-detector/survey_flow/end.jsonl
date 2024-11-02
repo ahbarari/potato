@@ -1,1 +1,2 @@
 {"id":"1","text":"Thanks for your participation!","schema": "pure_display", "choices": []}
+{"id": "2", "text": "Add any comments that you have to help us improve our work. (Optional)", "schema": "text"}

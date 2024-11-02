@@ -104,6 +104,17 @@
     "header_file": "default",
 
     # This is where the actual HTML files will be generated
-    "site_dir": "default"
+    "site_dir": "default",
+
+    "login": {
+      "type": 'url_direct',    #can be 'password' or 'url_direct'
+      "url_argument": 'PROLIFIC_PID' # when the login type is set to 'url_direct', 'url_argument' must be setup for a direct url argument login
+    },
+
+    #the jumping-to-id function will be disabled if "jumping_to_id_disabled" is True
+    "jumping_to_id_disabled": True,
+
+    #the navigation bar will be hidden to the annotators if "hide_navbar" is True
+    # "hide_navbar": True,
 
 }
