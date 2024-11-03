@@ -52,6 +52,9 @@ docs/_build/
 
 claim-detector/data/html_data
 claim-detector/annotation_output
+claim-detector/annotation_output_1
+claim-detector/annotation_output_2
+claim-detector/annotation_output_3
 claim-detector/user_config.json
 
 potato/templates
