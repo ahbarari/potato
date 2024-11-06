@@ -1,3 +1,2 @@
 {"id":"1", "text":"What is your gender? *","schema": "radio", "choices": ["Woman", "Man", "Non-binary","Prefer not to disclose", "Prefer to self-describe (please specify)"], "has_free_response": {"instruction": ""},"label_requirement": {"required":true}}
 {"id":"2", "text":"What is your age? *","schema": "radio", "choices": ["18-29","30-39","40-49",">50","Prefer not to disclose"],"label_requirement": {"required":true}}
-{"id":"3", "text":"Are you type 1 diabetic? *","schema": "radio", "choices": ["Yes", "No"],"label_requirement": {"required":true}}
