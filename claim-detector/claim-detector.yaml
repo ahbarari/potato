@@ -23,7 +23,7 @@
     "annotation_codebook_url": "https://docs.google.com/document/d/1T3Apab4XtTAd35FwJPitLwOQe5oTAnOqdunuB9XGJTQ/",
 
     "data_files": [
-       "data/posts.jsonl"
+       "data/posts_chunk1.jsonl"
     ],
 
     "item_properties": {
