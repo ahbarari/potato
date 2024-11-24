@@ -1,5 +1,5 @@
 {
-    "port": 9005,
+    "port": 9009,
 
     "server_name": "potato annotator",
 
@@ -8,7 +8,7 @@
     # Potato will write the annotation file for all annotations to this
     # directory, as well as per-annotator output files and state information
     # necessary to restart annotation.
-    "output_annotation_dir": "annotation_output_4/",
+    "output_annotation_dir": "annotation_output_8/",
 
     # The output format for the all-annotator data. Allowed formats are:
     # * jsonl
@@ -23,7 +23,7 @@
     "annotation_codebook_url": "https://docs.google.com/document/d/1T3Apab4XtTAd35FwJPitLwOQe5oTAnOqdunuB9XGJTQ/",
 
     "data_files": [
-       "data/html_potato_new_dataset_chunk_t1.jsonl"
+       "data/html_potato_new_dataset_chunk_t5.jsonl"
     ],
 
     "item_properties": {
@@ -112,7 +112,7 @@
     },
 
     "prolific": {
-    "config_file_path": 'prolific_config-4.yaml'
+    "config_file_path": 'prolific_config-8.yaml'
     },
 
     #the jumping-to-id function will be disabled if "jumping_to_id_disabled" is True
